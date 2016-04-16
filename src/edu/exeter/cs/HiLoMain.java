@@ -45,6 +45,7 @@ public class HiLoMain {
 			}
 		} while (stillPlaying == true && !s.equals("q"));
 		scan.close();
+		
 	}
 	
 	public static void HiLo(double num) {
