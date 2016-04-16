@@ -19,7 +19,7 @@ public class HiLoMain {
 				if (s.matches("\\d+")) {
 					n = Integer.parseInt(s);
 				}else if (s.equals("q")) {
-					n = 101.5;
+					break;
 				}else {
 					n = -1;
 				}
@@ -27,6 +27,9 @@ public class HiLoMain {
 				count++;
 			}
 			System.out.println("You made " + count + " guesses.");
+			if (s.equals("q")) {
+				System.out.println("Thank you for playing.");
+			}
 			if (!s.equals("q")) {
 				System.out.println("Thank you for playing.");
 				System.out.println();
@@ -45,17 +48,13 @@ public class HiLoMain {
 	}
 	
 	public static void HiLo(double num) {
-		if (num == 101.5) {
-			count--;
-			System.out.println();
-			System.out.println("Thank you for playing.");
-		} if (num == rand) {
+		if (num == rand) {
 			System.out.println("You guessed correctly!");
 		} if (num > rand && num < 101 ) {
 			System.out.println("Your guess is too high.");
 		} if (num < rand && num > 0) {
 			System.out.println("Your guess is too low.");
-		} if (num <= 0 && num != 101.5 || num > 100 && num != 101.5) {
+		} if (num < 1 || num > 100) {
 			System.out.println("Your guess must be an integer on the interval [0, 100]");
 		}
 	}
