@@ -1,6 +1,6 @@
 package edu.exeter.cs;
 
-public class CodingBatMain {
+public class Sum28Main {
 	
 	public static void main(String[] args) {
 		int[] arrayOfNums = {2,2,3,4,2,2};  
