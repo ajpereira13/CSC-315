@@ -19,7 +19,12 @@ public class Die {
 	}
 
 	public void setFaceValue(int value) {
-		faceValue = value;
+		if (value > 0 && value <= MAX) {
+			faceValue = value;
+		} else {
+			faceValue = -1;
+			System.out.println("Please assign an integer value between [1,6]");
+		}
 	}
 
 	public String toString(){
