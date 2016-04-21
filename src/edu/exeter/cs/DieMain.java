@@ -6,15 +6,19 @@ public class DieMain {
 	
 		//Here we create an instance of the class Die. die1 is an object.
 		Die die1 = new Die();
-		die1.setFaceValue(5);
-		System.out.println(die1.getFaceValue());
-
+		die1.roll();
+		die1.roll();
+		die1.roll();
+		System.out.println(die1.getRoll());
+		die1.setRoll(5);
+		System.out.println(die1.getRoll());
 	}
 	
 	public static class Die {
 		
 		private final int MAX = 6;
 		private int faceValue;
+		private int count = 0;
 
 		//This function is a constructor.
 		public Die(){
@@ -22,6 +26,7 @@ public class DieMain {
 		}
 
 		public int roll(){
+			count++;
 			faceValue = (int)(Math.random()*MAX)+1;
 			return faceValue;
 		}
@@ -39,6 +44,14 @@ public class DieMain {
 				faceValue = -1;
 				System.out.println("Please assign an integer value between [1,6]");
 			}
+		}
+		
+		public int getRoll() {
+			return count;
+		}
+		
+		public void setRoll(int n) {
+			count = n;
 		}
 
 		public String toString(){
