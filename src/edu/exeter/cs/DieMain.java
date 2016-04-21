@@ -4,8 +4,9 @@ public class DieMain {
 
 	public static void main(String[] args) {
 	
+		//Here we create an instance of the class Die. die1 is an object.
 		Die die1 = new Die();
-		die1.setFaceValue(0);
+		die1.setFaceValue(5);
 		System.out.println(die1.getFaceValue());
 
 	}
@@ -15,6 +16,7 @@ public class DieMain {
 		private final int MAX = 6;
 		private int faceValue;
 
+		//This function is a constructor.
 		public Die(){
 			faceValue = 1;
 		}
@@ -24,10 +26,12 @@ public class DieMain {
 			return faceValue;
 		}
 
+		//This function is an accessor (getter).
 		public int getFaceValue() {
 			return faceValue;
 		}
 
+		//This function is a mutator (setter).
 		public void setFaceValue(int value) {
 			if (value > 0 && value <= MAX) {
 				faceValue = value;
