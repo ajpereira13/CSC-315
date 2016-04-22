@@ -6,11 +6,14 @@ public class DieMain {
 	
 		//Here we create an instance of the class Die. die1 is an object.
 		Die die1 = new Die();
+		Die die2 = new Die();
 		die1.roll();
 		die1.roll();
 		die1.roll();
+		die2.roll();
+		die2.roll();
 		System.out.println(die1.getRoll());
-		die1.setRoll(5);
+		die1.setRoll(0);
 		System.out.println(die1.getRoll());
 	}
 	
@@ -18,17 +21,17 @@ public class DieMain {
 		
 		private final int MAX = 6;
 		private int faceValue;
-		private int count = 0;
+		private static int count = 0;
 
 		//This function is a constructor.
-		public Die(){
+		public Die() {
 			faceValue = 1;
 		}
 
 		//This function generates a pseudorandom number between 1 and 6.
-		public int roll(){
-			count++;
+		public int roll() {
 			faceValue = (int)(Math.random()*MAX)+1;
+			count++;
 			return faceValue;
 		}
 
@@ -58,7 +61,7 @@ public class DieMain {
 		}
 
 		//This function returns the faceValue of the die a string so it can be printed.
-		public String toString(){
+		public String toString() {
 			String result = Integer.toString(faceValue);
 			return result;
 		}
