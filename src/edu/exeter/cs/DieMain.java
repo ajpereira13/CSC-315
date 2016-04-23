@@ -10,10 +10,11 @@ public class DieMain {
 		die1.roll();
 		die1.roll();
 		die1.roll();
+		System.out.println(die2.getRoll());
 		die2.roll();
 		die2.roll();
 		System.out.println(die1.getRoll());
-		die1.setRoll(0);
+		die2.setRoll(0);
 		System.out.println(die1.getRoll());
 	}
 	
